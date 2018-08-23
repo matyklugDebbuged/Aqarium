@@ -21,7 +21,7 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().register(new BlockGenerator());
-        GameRegistry.registerTileEntity(TileGenerator.class, Ref.modid + "_BlockGenerator");
+        GameRegistry.registerTileEntity(TileGenerator.class, Ref.modid + "_blockgenerator");
     }
 
     @SubscribeEvent

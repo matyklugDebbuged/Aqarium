@@ -11,7 +11,7 @@ import net.minecraft.potion.PotionEffect;
 public class Ringos extends Item implements IBauble {
 
     public Ringos() {
-        setRegistryName("Ringos");        // The unique name (within your mod) that identifies this item
+        setRegistryName("ringos");        // The unique name (within your mod) that identifies this item
         setUnlocalizedName(com.matyk.aqarium.util.Ref.modid + ".firstitem");     // Used for localization (en_US.lang)
     }
 

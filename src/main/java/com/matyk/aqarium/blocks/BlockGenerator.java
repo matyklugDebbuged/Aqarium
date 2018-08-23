@@ -23,7 +23,7 @@ public class BlockGenerator extends BlockContainer {
         super(Material.IRON);
         this.setSoundType(SoundType.METAL);
         this.setLightLevel(1f);
-        setRegistryName("BlockGenerator");
+        setRegistryName("blockgenerator");
         setUnlocalizedName(Ref.modid + ".blockgenerator");
     }
 
