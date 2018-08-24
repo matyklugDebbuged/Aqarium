@@ -7,6 +7,7 @@ import net.minecraft.block.BlockContainer;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -24,8 +25,14 @@ public class BlockGenerator extends BlockContainer {
         this.setSoundType(SoundType.METAL);
         this.setLightLevel(1f);
         setRegistryName("blockgenerator");
-        setUnlocalizedName(Ref.modid + ".blockgenerator");
+        setUnlocalizedName(Ref.modid + ".BlockGenerator");
     }
+    
+	@Override
+	public BlockGenerator setCreativeTab(CreativeTabs tab) {
+		super.setCreativeTab(tab);
+		return this;
+	}
 
     @Override
     public boolean hasTileEntity(IBlockState state) {

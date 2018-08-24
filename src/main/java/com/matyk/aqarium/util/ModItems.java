@@ -10,5 +10,7 @@ public class ModItems {
 
     @GameRegistry.ObjectHolder("aquariumtestmod:ringos")
     public static Ringos ringos;
+    
+    
 }
 
