@@ -8,8 +8,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModBlocks {
 
-    @GameRegistry.ObjectHolder("aqariumtestmod:BlockGenerator")
-    public static BlockGenerator BlockGenerator;
+    @GameRegistry.ObjectHolder("aqariumtestmod:blockgenerator")
+    public static BlockGenerator blockgenerator;
 
     
 }

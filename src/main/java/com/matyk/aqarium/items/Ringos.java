@@ -1,7 +1,7 @@
 package com.matyk.aqarium.items;
 
-import baubles.api.BaubleType;
-import baubles.api.IBauble;
+import com.matyk.aqarium.api.baubles.api.BaubleType;
+import com.matyk.aqarium.api.baubles.api.IBauble;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.MobEffects;
@@ -18,8 +18,8 @@ public class Ringos extends Item implements IBauble {
 	}
 	
     public Ringos() {
-        setRegistryName("ringos");        // The unique name (within your mod) that identifies this item
-        setUnlocalizedName(com.matyk.aqarium.util.Ref.modid + ".firstitem");     // Used for localization (en_US.lang)
+        this.setRegistryName("ringos");        // The unique name (within your mod) that identifies this item
+        this.setUnlocalizedName(com.matyk.aqarium.util.Ref.modid + ".firstitem");     // Used for localization (en_US.lang)
     }
 
     @Override

@@ -26,7 +26,7 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(new ItemBlock(ModBlocks.BlockGenerator).setRegistryName("blockgenerator"));
+        event.getRegistry().register(new ItemBlock(ModBlocks.blockgenerator).setRegistryName("blockgenerator"));
         event.getRegistry().register(new Ringos());
 
     }
