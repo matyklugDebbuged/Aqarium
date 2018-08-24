@@ -12,14 +12,21 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.0"
-group = "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "modid"
+version = "0.0.1.0"
+group = "matyk.aqarium" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "aqarium"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {
     sourceCompatibility = targetCompatibility = '1.8'
 }
+
+    repositories {
+        maven {
+        name = "thiakil"
+        url = "http://maven.thiakil.com/"
+    }
+    }
 
 minecraft {
     version = "1.12.2-14.23.4.2705"
@@ -35,6 +42,12 @@ minecraft {
 }
 
 dependencies {
+
+    //compile 'baubles:Baubles:1.12:1.5.2'
+    deobfCompile "com.azanor.baubles:Baubles:1.12-1.5.2"
+
+
+    
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"
@@ -55,6 +68,7 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    
 
 }
 
@@ -75,4 +89,5 @@ processResources {
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+}
 }
