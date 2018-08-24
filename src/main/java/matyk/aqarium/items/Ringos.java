@@ -2,12 +2,16 @@ package matyk.aqarium.items;
 
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Ringos extends Item implements IBauble {
 
@@ -39,4 +43,9 @@ public class Ringos extends Item implements IBauble {
 	public boolean hasEffect(ItemStack par1ItemStack) {
 		return true;
 	}
+	
+	@SideOnly(Side.CLIENT)
+    public void initModel() {
+        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+    }
 }

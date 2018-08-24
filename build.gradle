@@ -21,12 +21,13 @@ compileJava {
     sourceCompatibility = targetCompatibility = '1.8'
 }
 
-    repositories {
-        maven {
+   repositories {
+    maven {
         name = "thiakil"
         url = "http://maven.thiakil.com/"
     }
-    }
+}
+    
 
 minecraft {
     version = "1.12.2-14.23.4.2705"
@@ -89,5 +90,4 @@ processResources {
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
-}
 }
