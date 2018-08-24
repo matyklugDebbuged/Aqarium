@@ -59,7 +59,7 @@ public static class RegistrationHandler {
 
     @SubscribeEvent
          public static void registerBlocks(RegistryEvent.Register<Block> event) {
-            event.getRegistry().register(new BlockGenerator());
+    	event.getRegistry().register(ModBlocks.blockgenerator);
             GameRegistry.registerTileEntity(TileGenerator.class, Ref.modid + "_blockgenerator");
        }
 

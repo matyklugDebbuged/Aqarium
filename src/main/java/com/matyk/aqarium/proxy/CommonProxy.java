@@ -16,19 +16,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy {
 
-	
-    @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        event.getRegistry().register(new BlockGenerator());
-        GameRegistry.registerTileEntity(TileGenerator.class, Ref.modid + "_blockgenerator");
-    }
-
-    @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(new ItemBlock(ModBlocks.blockgenerator).setRegistryName("blockgenerator"));
-        event.getRegistry().register(new Ringos());
-
-    }
 
     
 }

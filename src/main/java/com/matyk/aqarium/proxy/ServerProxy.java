@@ -14,8 +14,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ServerProxy extends CommonProxy{
-    
-	@SubscribeEvent
+    @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().register(new BlockGenerator());
         GameRegistry.registerTileEntity(TileGenerator.class, Ref.modid + "_blockgenerator");

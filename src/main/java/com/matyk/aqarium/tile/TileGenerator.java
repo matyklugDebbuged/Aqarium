@@ -53,7 +53,8 @@ public class TileGenerator extends TileEntity implements IEnergyStorage, ITickab
     public boolean canReceive() {
         return false;
     }
-
+    int receiveEnergy;
+    IEnergyStorage storage;
     @Override
     public void update() {
         if (this.world.isRemote) return;
@@ -61,7 +62,11 @@ public class TileGenerator extends TileEntity implements IEnergyStorage, ITickab
             TileEntity te = this.world.getTileEntity(this.pos.offset(facing));
             if (te != null && te.hasCapability(CapabilityEnergy.ENERGY, facing.getOpposite())) {
                 IEnergyStorage energyStorage = te.getCapability(CapabilityEnergy.ENERGY, facing.getOpposite());
+                if (energyStorage.canReceive())
+                	for (int i = 0; i < 100 && (receiveEnergy = energyStorage.receiveEnergy(16777216, false)) != 0; ++i) {
+                    }
+            }
             }
         }
     }
-}
+
