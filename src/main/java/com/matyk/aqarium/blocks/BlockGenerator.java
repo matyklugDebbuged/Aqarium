@@ -24,8 +24,9 @@ public class BlockGenerator extends BlockContainer {
         super(Material.IRON);
         this.setSoundType(SoundType.METAL);
         this.setLightLevel(1f);
-        setRegistryName("blockgenerator");
-        setUnlocalizedName(Ref.modid + ".BlockGenerator");
+        this.setRegistryName("blockgenerator");
+        this.setUnlocalizedName(Ref.modid + ".BlockGenerator");
+        this.setCreativeTab(CreativeTabs.TOOLS);
     }
     
 	@Override
