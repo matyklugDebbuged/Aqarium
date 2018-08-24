@@ -8,5 +8,5 @@ public class Ref {
 	public static final String accversions = "[1.12.2]";
 	
 	public static final String clientProxy = "com.matyk.aqarium.proxy.ClientProxy";
-	public static final String serverProxy = "com.matyk.aqarium.proxy.CommonProxy";
+	public static final String serverProxy = "com.matyk.aqarium.proxy.ServerProxy";
 }

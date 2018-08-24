@@ -29,11 +29,11 @@ public class BlockGenerator extends BlockContainer {
         this.setCreativeTab(CreativeTabs.TOOLS);
     }
     
-	@Override
-	public BlockGenerator setCreativeTab(CreativeTabs tab) {
-		super.setCreativeTab(tab);
-		return this;
-	}
+	//@Override
+	//public BlockGenerator setCreativeTab(CreativeTabs tab) {
+		//super.setCreativeTab(tab);
+		//return this;
+	//}
 
     @Override
     public boolean hasTileEntity(IBlockState state) {

@@ -19,8 +19,8 @@ public class Ringos extends Item implements IBauble {
 	
     public Ringos() {
         this.setRegistryName("ringos");        // The unique name (within your mod) that identifies this item
-        this.setUnlocalizedName(com.matyk.aqarium.util.Ref.modid + ".firstitem");     // Used for localization (en_US.lang)
-        this.setCreativeTab(CreativeTabs.TOOLS);
+        this.setUnlocalizedName(com.matyk.aqarium.util.Ref.modid + ".ringos");     // Used for localization (en_US.lang)
+       // this.setCreativeTab(CreativeTabs.TOOLS);
     }
 
     @Override
