@@ -1,0 +1,12 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "normal": {
+            "model": "aqariumtestmod:blockgenerator"
+        },
+        "inventory": {
+            "model": "aqariumtestmod:blockgenerator",
+            "transform": "forge:default-block"
+        }
+    }
+}

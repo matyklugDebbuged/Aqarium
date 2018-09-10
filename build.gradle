@@ -26,6 +26,10 @@ compileJava {
         name = "thiakil"
         url = "http://maven.thiakil.com/"
     }
+    maven {
+     url "http://maven.amadornes.com/" 
+     }
+
 }
     
 
@@ -44,8 +48,9 @@ minecraft {
 
 dependencies {
 
-    //compile 'baubles:Baubles:1.12:1.5.2'
     deobfCompile "com.azanor.baubles:Baubles:1.12-1.5.2"
+    deobfCompile "MCMultiPart2:MCMultiPart:2.5.2"
+
 
 
     

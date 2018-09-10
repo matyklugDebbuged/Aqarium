@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "aqariumtestmod:blocks/blockgenerator_face0",
+        "up": "aqariumtestmod:blocks/blockgenerator_face1",
+        "north": "aqariumtestmod:blocks/blockgenerator_face2",
+        "east": "aqariumtestmod:blocks/blockgenerator_face3",
+        "south": "aqariumtestmod:blocks/blockgenerator_face4",
+        "west": "aqariumtestmod:blocks/blockgenerator_face5",
+        "particle": "blocks/lapis_block"
+    }
+}

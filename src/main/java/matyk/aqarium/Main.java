@@ -24,6 +24,7 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -41,17 +42,24 @@ public static CommonProxy proxy;
 
 @EventHandler
 public static void PreInit(FMLPreInitializationEvent event){
-	SoundEvent.REGISTRY.getKeys().forEach(System.out::println);
+	//SoundEvent.REGISTRY.getKeys().forEach(System.out::println);
 }
 
 @EventHandler
 public static void Init(FMLInitializationEvent event){
-	SoundEvent.REGISTRY.getKeys().forEach(System.out::println);
+	//SoundEvent.REGISTRY.getKeys().forEach(System.out::println);
 }
 
 @EventHandler
 public static void PostInit(FMLPostInitializationEvent event){
-	SoundEvent.REGISTRY.getKeys().forEach(System.out::println);
+	//SoundEvent.REGISTRY.getKeys().forEach(System.out::println);
+}
+static float pitch = 1;
+static String name = "minecraft:item.hoe.till";
+static SoundEvent sound = SoundEvent.REGISTRY.getObject(new ResourceLocation(name));
+@EventHandler
+public static void DoneInit(FMLLoadCompleteEvent event){
+	Minecraft.getMinecraft().getSoundHandler().playSound(PositionedSoundRecord.getMasterRecord(sound, (float)pitch));
 }
 
 @Mod.EventBusSubscriber
@@ -76,9 +84,10 @@ public static class RegistrationHandler {
         event.getRegistry().register(new ItemBlock(ModBlocks.blockgenerator).setRegistryName("blockgenerator"));
         event.getRegistry().register(new Ringos());
     }
+  
   boolean played = false;
   float pitch = 1;
-  String name = null;
+  String name = "minecraft:item.hoe.till";
   
   @SubscribeEvent
   public void onGuiOpen(GuiOpenEvent event)
@@ -86,7 +95,7 @@ public static class RegistrationHandler {
 	if(event.getGui() instanceof GuiMainMenu && !played)
       {
           played = true;
-          int playOn = 0;
+          int playOn = 1;
 		if(playOn == 1 || playOn == 3)
           {
 			SoundEvent sound = SoundEvent.REGISTRY.getObject(new ResourceLocation(name));
@@ -100,8 +109,9 @@ public static class RegistrationHandler {
           }
       }
   }
-}
 
+
+}
 }
 
 
