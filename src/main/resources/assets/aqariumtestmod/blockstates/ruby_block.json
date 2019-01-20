@@ -1,0 +1,17 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "top": "aqariumtestmod:ruby_block",
+      "front": "aqariumtestmod:ruby_block",
+      "side": "aqariumtestmod:ruby_block"
+    },
+    "model": "aqariumtestmod:ruby_block"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{
+      "transform": "forge:default-block"
+    }]
+  }
+}
